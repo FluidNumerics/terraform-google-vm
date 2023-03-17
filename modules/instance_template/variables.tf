@@ -190,6 +190,12 @@ variable "stack_type" {
   default     = null
 }
 
+variable "nic_type" {
+  type = string
+  description = "The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET."
+  default = null
+}
+
 variable "additional_networks" {
   description = "Additional network interface details for GCE, if any."
   default     = []

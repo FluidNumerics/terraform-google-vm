@@ -108,6 +108,7 @@ resource "google_compute_instance_template" "tpl" {
     subnetwork_project = var.subnetwork_project
     network_ip         = length(var.network_ip) > 0 ? var.network_ip : null
     stack_type         = var.stack_type
+    nic_type           = length(var.nic_type) > 0 ? var.nic_type : null
     dynamic "access_config" {
       for_each = var.access_config
       content {
